@@ -1,8 +1,10 @@
 def print_menu():
     print('1. Kilometers to Miles')
     print('2. Miles to Kilometers')
-    print('3. Kilograms to Pounds')
-    print('4. Pounds to Kilograms')
+    print('3. Celsius to fahrenheit')
+    print('4. fahrenheit to celsius')
+    print('5. Kilograms to Pounds')
+    print('6. Pounds to Kilograms')
 
 def km_miles():
     km = float(input("Please enter distance in kilometers: "))
@@ -13,6 +15,16 @@ def miles_km():
     miles = float(input("Please enter distance in miles: "))
     km = miles*1.609
     print("Distance in kilometers: {0}".format(km))
+
+def celsius_fahrenheit():
+    celsius = float(input("Please enter the temperature in celsius: "))
+    fahrenheit = celsius*9/5+32
+    print("Temperature in fahrenheit: {0}".format(fahrenheit))
+
+def fahrenheit_celsius():
+    fahrenheit = float(input("Please enter the temperature in fahrenheit: "))
+    celsius = (fahrenheit-32)*5/9
+    print("Temperature in celsius: {0}".format(celsius))
 
 def kg_lb():
     kg = float(input("Please enter weight in kilograms: "))
@@ -32,6 +44,10 @@ if __name__ == '__main__':
     if choice == '2':
         miles_km()
     if choice == '3':
-        kg_lb()
+        celsius_fahrenheit()
     if choice == '4':
+        fahrenheit_celsius()
+    if choice == '5':
+        kg_lb()
+    if choice == '6':
         lb_kg()
